@@ -3,6 +3,11 @@ Config.js
 
 A very simple configuration control for Node.js applications. You can set and get... that's basically all you need.
 
+WARNING
+-------
+
+This has yet been published to npm as it is still in aplha.
+
 The Getter
 ----------
 
