@@ -1,0 +1,29 @@
+{
+  "name": "config.js",
+  "description": "Simple configuration module for node apps. It will look for application config and then environment config.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/johngeorgewright/config.js",
+  "author": {
+    "name": "John Wright",
+    "email": "johngeorge.wright@gmail.com",
+    "url": "http://www.j-g-w.info"
+  },
+  "contributors": [
+    {
+      "name": "John Wright",
+      "email": "johngeorge.wright@gmail.com",
+      "url": "http://www.j-g-w.info"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johngeorgewright/config.js.git"
+  },
+  "devDependencies": {
+    "jasmine-node": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/johngeorgewright/config.js/issues"
+  }
+}
+
