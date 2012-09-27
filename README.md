@@ -59,7 +59,7 @@ db.connect(config.get('DB_USER', 'root'), config.get('DB_PASS', 'passpass'));
 
 Easy.
 
-Using config.js with Express.js - TODO
+Using config.js with Express.js
 -------------------------------
 
 So, express already has a configuration object; the express instance itself:
@@ -73,7 +73,7 @@ app.get('mung'); // 'face'
 app.get('foo', 'bar'); // /bar
 ```
 
-That's all good, but it doesn't take the environment variables in to consideration. Wouldn't it be great if we could have the missing part of that functionality.
+That's all good, but it doesn't take the environment variables in to consideration. So you can now use all the functionality config.js has within the express instance.
 
 ```js
 var express = require('express'),
@@ -82,6 +82,24 @@ var express = require('express'),
 
 config.use(app);
 
-app.get('DB_USER'); // 'my_user'
+config.set('view engine', 'jade');
+config.get('view engine');         // 'jade'
+app.get('view engine');            // jade'
+app.get('DB_USER');                // 'my_user'
+```
+
+As you can see, you can continue the the `app` variable and it will update the `config`'s properties too.
+
+You can also use the `use` method more than once to add the several of your ready made config objects.
+
+```js
+var express           = require('express'),
+    somethingExpressy = require('otherExpress'),
+    config            = require('config.js');
+
+config.use(express());
+config.use(somethingExpressy());
+
+config.get('static directory'); // Will search through all objects before using the default behaviour.
 ```
 
