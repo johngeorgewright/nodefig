@@ -18,6 +18,10 @@ exports.set = function set(key, value) {
   config[key] = value;
 };
 
+exports.unset = function unset(key) {
+  delete config[key];
+};
+
 exports.use = function use(obj) {
   var getter = obj.get,
       getterClosure;

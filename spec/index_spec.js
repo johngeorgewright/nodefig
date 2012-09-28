@@ -41,6 +41,19 @@ describe('config.js', function() {
 
   });
 
+  describe('unset()', function() {
+
+    beforeEach(function() {
+      this.config.set('cheese', 'gromit');
+    });
+
+    it('should unset the "cheese" property', function() {
+      this.config.unset('cheese');
+      expect(this.config.get('cheese')).toBeUndefined();
+    });
+
+  });
+
   describe('use()', function() {
 
     beforeEach(function() {
