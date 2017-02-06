@@ -1,6 +1,8 @@
 Config.js
 =========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/johngeorgewright/nodefig.svg)](https://greenkeeper.io/)
+
 A very simple configuration control for Node.js applications. You can set and get... that's basically all you need.
 
 WARNING
